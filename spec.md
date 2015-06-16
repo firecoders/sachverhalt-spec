@@ -12,7 +12,7 @@
 * `website` (optional)
 * `email` (optional): The person’s email address
 
-Example:
+#### Example
 
 ```json
 {
@@ -31,7 +31,7 @@ Example:
 * `website` (optional)
 * `synopsis` (optional): A String containing a short description of the plugin
 
-Example:
+#### Example
 
 ```json
 {
@@ -58,7 +58,7 @@ Example:
 * `plugins` (may be empty): List of Plugins that store extra information in this issue
 * `author`: A person
 
-Example:
+#### Example
 
 ```json
 {
@@ -106,6 +106,32 @@ Issues will match if all of the `criteria` match.
 * `criteria`: A list of FilterCriterion objects
 
 Issues will match if at least one of the `criteria` matches.
+
+#### Example
+
+The following FilterCriterion will match Issues with the tag `question`, but not
+from an author with the name `annoyingguy`:
+
+```json
+{
+  "type": "and",
+  "criteria": [
+    {
+      "type": "template",
+      "tags": [ "question" ]
+    },
+    {
+      "type": "not",
+      "criterion": {
+        "type": "template",
+        "author": {
+          "name": "annoyingguy"
+        }
+      }
+    }
+  ]
+}
+```
 
 ## Requests
 
