@@ -115,10 +115,12 @@ from an author with the name `annoyingguy`:
 ```json
 {
   "type": "and",
-  "criteria": [ {
+  "criteria": [
+    {
       "type": "template",
       "tags": [ "question" ]
-    }, {
+    },
+    {
       "type": "not",
       "criterion": {
         "type": "template",
