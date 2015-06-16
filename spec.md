@@ -12,7 +12,7 @@
 * `website` (optional)
 * `email` (optional): The person’s email address
 
-Example:
+#### Example
 
 ```json
 {
@@ -31,7 +31,7 @@ Example:
 * `website` (optional)
 * `synopsis` (optional): A String containing a short description of the plugin
 
-Example:
+#### Example
 
 ```json
 {
@@ -58,7 +58,7 @@ Example:
 * `plugins` (may be empty): List of Plugins that store extra information in this issue
 * `author`: A person
 
-Example:
+#### Example
 
 ```json
 {
