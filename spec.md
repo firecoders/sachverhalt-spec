@@ -107,6 +107,30 @@ Issues will match if all of the `criteria` match.
 
 Issues will match if at least one of the `criteria` matches.
 
+#### Example
+
+The following FilterCriterion will match Issues with the tag `question`, but not
+from an author with the name `annoyingguy`:
+
+```json
+{
+  "type": "and",
+  "criteria": [ {
+      "type": "template",
+      "tags": [ "question" ]
+    }, {
+      "type": "not",
+      "criterion": {
+        "type": "template",
+        "author": {
+          "name": "annoyingguy"
+        }
+      }
+    }
+  ]
+}
+```
+
 ## Requests
 
 ### `query_plugins`
